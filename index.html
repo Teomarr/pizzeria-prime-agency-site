@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizzeria Prime Agency</title>
+<meta name="description" content="Pizzeria Prime Agency aiuta le pizzerie di quartiere a riempire i giorni morti, senza che il titolare perda il controllo della propria vita.">
+<style>
+  :root{
+    --bg:#0f0f0f;
+    --bg-panel:#171717;
+    --text:#f4f1ec;
+    --text-dim:#b7b2a8;
+    --accent:#d94f30;
+    --border:#2a2a2a;
+    --max:760px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  header{padding:56px 0 8px;}
+  .brand{
+    font-size:15px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    font-weight:600;
+  }
+  .brand strong{color:var(--text);}
+  main{padding:64px 0 40px;}
+  h1{
+    font-size:clamp(32px,6vw,52px);
+    line-height:1.08;
+    margin:0 0 20px;
+    letter-spacing:-0.01em;
+  }
+  h1 em{
+    font-style:normal;
+    color:var(--accent);
+  }
+  .lead{
+    font-size:19px;
+    color:var(--text-dim);
+    max-width:56ch;
+    margin:0 0 40px;
+  }
+  .divider{height:1px;background:var(--border);margin:48px 0;}
+  h2{
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--text-dim);
+    margin:0 0 20px;
+    font-weight:600;
+  }
+  ul.points{list-style:none;padding:0;margin:0 0 8px;}
+  ul.points li{
+    padding:14px 0;
+    border-bottom:1px solid var(--border);
+    font-size:17px;
+  }
+  ul.points li:last-child{border-bottom:none;}
+  ul.points li strong{display:block;color:var(--text);margin-bottom:2px;}
+  ul.points li span{color:var(--text-dim);}
+  .fit{font-size:16px;color:var(--text-dim);}
+  .fit strong{color:var(--text);}
+  .cta{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:32px;
+    margin-top:16px;
+  }
+  .cta p{margin:0 0 20px;color:var(--text-dim);font-size:16px;}
+  .cta a.btn{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    padding:13px 22px;
+    border-radius:8px;
+    font-weight:600;
+    font-size:15px;
+  }
+  footer{
+    padding:32px 0 56px;
+    color:var(--text-dim);
+    font-size:13px;
+    border-top:1px solid var(--border);
+    margin-top:40px;
+  }
+  footer a{color:var(--text-dim);}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><strong>Pizzeria Prime</strong> Agency</div>
+    </header>
+
+    <main>
+      <h1>Sala piena, <em>testa libera</em>.</h1>
+      <p class="lead">
+        Aiutiamo le pizzerie di quartiere a riempire i giorni morti e a costruire
+        un locale che funziona anche senza il titolare sempre dentro a contare i coperti.
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>Cosa facciamo</h2>
+      <ul class="points">
+        <li>
+          <strong>Acquisizione sui giorni morti</strong>
+          <span>Campagne mirate per riempire martedì e mercoledì, non solo il sabato.</span>
+        </li>
+        <li>
+          <strong>Database clienti e riattivazione</strong>
+          <span>Chi è già venuto una volta, torna — senza dover ricominciare ogni mese da zero.</span>
+        </li>
+        <li>
+          <strong>Recensioni e reputazione</strong>
+          <span>Più recensioni vere, più fiducia prima ancora che qualcuno entri dalla porta.</span>
+        </li>
+        <li>
+          <strong>Offerte, non sconti</strong>
+          <span>Offerte pensate per far tornare le persone, non per svendere il lavoro fatto bene.</span>
+        </li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <h2>Per chi</h2>
+      <p class="fit">
+        <strong>Pizzerie di quartiere</strong> con forno a legna, qualche anno di storia alle spalle
+        e un titolare che lavora davvero dentro al locale — non catene, non asporto puro,
+        non locali aperti da pochi mesi.
+      </p>
+
+      <div class="divider"></div>
+
+      <div class="cta">
+        <p>Vuoi capire se può funzionare anche per il tuo locale? Scrivici.</p>
+        <a class="btn" href="mailto:matteomarino@pizzeriaprimeagency.it">Scrivi a matteomarino@pizzeriaprimeagency.it</a>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2026 Pizzeria Prime Agency — <a href="mailto:matteomarino@pizzeriaprimeagency.it">matteomarino@pizzeriaprimeagency.it</a>
+    </footer>
+  </div>
+</body>
+</html>
