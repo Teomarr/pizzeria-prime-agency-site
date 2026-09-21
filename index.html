@@ -1,158 +1,1048 @@
-<!doctype html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pizzeria Prime Agency</title>
-<meta name="description" content="Pizzeria Prime Agency aiuta le pizzerie di quartiere a riempire i giorni morti, senza che il titolare perda il controllo della propria vita.">
+<title>Pizzeria Prime Agency · Pensa a dover dire di no anche di martedì</title>
+<meta name="description" content="Copro il turno che nel tuo locale non copre nessuno: quello che fa entrare la gente il martedì, il mercoledì e il giovedì. Solo pizzerie di quartiere con la sala.">
+<meta property="og:title" content="Pensa invece a dover dire di no anche di martedì · Pizzeria Prime Agency">
+<meta property="og:description" content="Il sabato ne mandi indietro trenta. Il martedì i coperti si contano sulle dita di due mani. I giorni morti non ti aiuto a riempirli: li riempio io.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pizzeriaprimeagency.it/">
+<meta property="og:image" content="https://pizzeriaprimeagency.it/anteprima.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pensa invece a dover dire di no anche di martedì. Pizzeria Prime Agency.">
+<meta property="og:locale" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0f0f0f;
-    --bg-panel:#171717;
-    --text:#f4f1ec;
-    --text-dim:#b7b2a8;
-    --accent:#d94f30;
-    --border:#2a2a2a;
-    --max:760px;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-    line-height:1.55;
-  }
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
-  header{padding:56px 0 8px;}
-  .brand{
-    font-size:15px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--text-dim);
-    font-weight:600;
-  }
-  .brand strong{color:var(--text);}
-  main{padding:64px 0 40px;}
-  h1{
-    font-size:clamp(32px,6vw,52px);
-    line-height:1.08;
-    margin:0 0 20px;
-    letter-spacing:-0.01em;
-  }
-  h1 em{
-    font-style:normal;
-    color:var(--accent);
-  }
-  .lead{
-    font-size:19px;
-    color:var(--text-dim);
-    max-width:56ch;
-    margin:0 0 40px;
-  }
-  .divider{height:1px;background:var(--border);margin:48px 0;}
-  h2{
-    font-size:13px;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-    color:var(--text-dim);
-    margin:0 0 20px;
-    font-weight:600;
-  }
-  ul.points{list-style:none;padding:0;margin:0 0 8px;}
-  ul.points li{
-    padding:14px 0;
-    border-bottom:1px solid var(--border);
-    font-size:17px;
-  }
-  ul.points li:last-child{border-bottom:none;}
-  ul.points li strong{display:block;color:var(--text);margin-bottom:2px;}
-  ul.points li span{color:var(--text-dim);}
-  .fit{font-size:16px;color:var(--text-dim);}
-  .fit strong{color:var(--text);}
-  .cta{
-    background:var(--bg-panel);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:32px;
-    margin-top:16px;
-  }
-  .cta p{margin:0 0 20px;color:var(--text-dim);font-size:16px;}
-  .cta a.btn{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    text-decoration:none;
-    padding:13px 22px;
-    border-radius:8px;
-    font-weight:600;
-    font-size:15px;
-  }
-  footer{
-    padding:32px 0 56px;
-    color:var(--text-dim);
-    font-size:13px;
-    border-top:1px solid var(--border);
-    margin-top:40px;
-  }
-  footer a{color:var(--text-dim);}
+:root{
+  --paper:#FBF7F1; --ink:#1A1614; --ink-soft:#4A423C; --muted:#786E66;
+  --ember:#B23C13; --ember-dk:#8F2F0C; --ember-tint:#FBEDE5;
+  --line:#E6DCCF; --line-strong:#D2C4B2; --dark:#171311; --dark-soft:#2A2320;
+  --ok:#2F6B4F;
+  --wrap:720px; --wide:940px;
+  --r:14px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:17.5px; line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%; height:auto; display:block}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 20px}
+.wide{max-width:var(--wide); margin:0 auto; padding:0 20px}
+
+h1,h2,h3{font-family:Fraunces,Georgia,serif; font-weight:600; line-height:1.12; letter-spacing:-.015em; margin:0 0 .5em}
+h1{font-size:clamp(1.85rem,6.1vw,2.95rem); font-weight:700; letter-spacing:-.025em}
+h2{font-size:clamp(1.55rem,4.6vw,2.2rem); margin-top:0}
+h3{font-size:clamp(1.15rem,3vw,1.35rem); font-weight:600}
+p{margin:0 0 1.1em}
+strong{font-weight:600; color:var(--ink)}
+em{font-style:italic}
+a{color:var(--ember-dk)}
+.lede{font-size:1.15em; color:var(--ink-soft)}
+.small{font-size:.9rem; color:var(--muted)}
+.tiny{font-size:.82rem; color:var(--muted); line-height:1.55}
+
+/* ---------- header ---------- */
+header.site{border-bottom:1px solid var(--line); background:rgba(251,247,241,.92); backdrop-filter:blur(8px); position:sticky; top:0; z-index:50}
+.brandrow{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; padding:14px 20px; max-width:var(--wide); margin:0 auto}
+.brand{font-family:Fraunces,Georgia,serif; font-weight:700; font-size:1.06rem; letter-spacing:-.02em}
+.metodo{font-family:Fraunces,Georgia,serif; font-size:.95rem; font-weight:600; color:var(--ink-soft); letter-spacing:-.01em}
+.tagline{font-size:.86rem; color:var(--ember); font-weight:500; font-style:italic}
+.brandrow .metodo::before,.brandrow .tagline::before{content:"\00b7"; color:var(--line-strong); margin-right:14px; font-weight:400}
+
+/* ---------- sections ---------- */
+section{padding:clamp(48px,8vw,84px) 0}
+section+section{border-top:1px solid var(--line)}
+.kicker{font-size:.76rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ember); margin:0 0 14px}
+.dark{background:var(--dark); color:#F3EDE5}
+.dark h2,.dark h3{color:#fff}
+.dark strong{color:#fff}
+.dark .kicker{color:#E8A87C}
+.dark .tiny,.dark .small{color:#B3A79C}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(40px,7vw,68px); padding-bottom:clamp(32px,5vw,48px)}
+.pre{font-size:.95rem; color:var(--muted); margin:0 0 18px; font-weight:500}
+.hero .scena{font-family:Fraunces,Georgia,serif; font-size:clamp(1.2rem,3.1vw,1.55rem); line-height:1.3;
+  color:var(--ink-soft); margin:0 0 .7em; max-width:28em; letter-spacing:-.01em}
+.hero h1{margin-bottom:.45em}
+.hero .sub{font-size:clamp(1.05rem,2.6vw,1.22rem); color:var(--ink-soft); max-width:34em}
+.hero h1{max-width:17em}
+.hero .pre{max-width:40em}
+.videowrap{padding-left:20px; padding-right:20px}
+
+/* ---------- video ---------- */
+.videowrap{max-width:var(--wide); margin:clamp(28px,5vw,44px) auto 0; padding:0 20px}
+.video{position:relative; aspect-ratio:16/9; border-radius:var(--r); overflow:hidden; background:var(--dark); border:1px solid var(--line-strong)}
+.video iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
+.vslot{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; text-align:center; padding:24px;
+  background:radial-gradient(120% 100% at 50% 0%,#2E2521 0%,#171311 70%); color:#EFE6DA}
+.play{width:66px; height:66px; border-radius:50%; border:2px solid rgba(255,255,255,.35); display:grid; place-items:center}
+.play span{display:block; width:0; height:0; border-left:19px solid rgba(255,255,255,.85); border-top:12px solid transparent; border-bottom:12px solid transparent; margin-left:5px}
+.vslot .t{font-family:Fraunces,Georgia,serif; font-size:1.15rem}
+.vslot .s{font-size:.88rem; color:#B3A79C; max-width:30em}
+.vcap{max-width:var(--wide); margin:12px auto 0; padding:0 20px; font-size:.88rem; color:var(--muted)}
+
+/* ---------- blocks ---------- */
+blockquote{margin:1.6em 0; padding:2px 0 2px 20px; border-left:3px solid var(--ember); color:var(--ink-soft); font-size:1.02em}
+blockquote p:last-child{margin-bottom:0}
+blockquote cite{display:block; margin-top:.6em; font-style:normal; font-size:.85rem; color:var(--muted)}
+.dark blockquote{border-left-color:#E8A87C; color:#E6DCD1}
+
+.punch{font-family:Fraunces,Georgia,serif; font-size:clamp(1.25rem,3.4vw,1.6rem); line-height:1.3; font-weight:600; margin:1.3em 0; letter-spacing:-.015em}
+.dark .punch{color:#fff}
+
+table{width:100%; border-collapse:collapse; margin:1.6em 0; font-size:.96rem}
+th,td{text-align:left; padding:13px 14px; border-bottom:1px solid var(--line); vertical-align:top}
+th{font-size:.76rem; letter-spacing:.09em; text-transform:uppercase; color:var(--muted); font-weight:700; border-bottom:1px solid var(--line-strong)}
+td:first-child{font-weight:600}
+.dark th,.dark td{border-bottom-color:rgba(255,255,255,.13)}
+.dark th{color:#B3A79C; border-bottom-color:rgba(255,255,255,.25)}
+
+/* telefono: le tabelle si impilano in schede, altrimenti le colonne sono illeggibili */
+@media(max-width:680px){
+  table{font-size:.97rem}
+  table,thead,tbody,tr,th,td{display:block; width:100%}
+  thead{display:none}
+  tbody tr{border:1px solid var(--line-strong); border-radius:12px; background:#fff; margin:0 0 14px; overflow:hidden}
+  tbody td{border-bottom:1px solid var(--line); padding:13px 16px}
+  tbody tr td:last-child{border-bottom:0}
+  tbody td:first-child{font-family:Fraunces,Georgia,serif; font-size:1.08rem; background:var(--ember-tint); color:var(--ink)}
+  .org .row{flex-direction:column; align-items:flex-start; gap:4px}
+  .org .who{text-align:left}
+  .brandrow{padding:9px 20px 10px; gap:0; line-height:1.38}
+  .brand{flex:0 0 100%; font-size:1rem}
+  .metodo{flex:0 0 100%; font-size:.82rem}
+  .tagline{flex:0 0 100%; font-size:.8rem}
+  .brandrow .metodo::before,.brandrow .tagline::before{content:none}
+}
+
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; margin:1.8em 0}
+.stat{background:var(--paper); padding:20px 18px}
+.stat .n{font-family:Fraunces,Georgia,serif; font-size:1.9rem; font-weight:700; letter-spacing:-.02em; color:var(--ember); line-height:1}
+.stat .l{font-size:.86rem; color:var(--ink-soft); margin-top:8px; line-height:1.45}
+.stat .p{font-size:.76rem; color:var(--muted); margin-top:6px}
+
+.card{border:1px solid var(--line-strong); border-radius:var(--r); padding:clamp(22px,4vw,32px); background:#fff; margin:1.8em 0}
+.card.tint{background:var(--ember-tint); border-color:#F0CDB5}
+.dark .card{background:var(--dark-soft); border-color:rgba(255,255,255,.14)}
+
+ul.plain{list-style:none; padding:0; margin:1.3em 0}
+ul.plain li{padding:12px 0 12px 30px; border-bottom:1px solid var(--line); position:relative}
+ul.plain li:last-child{border-bottom:0}
+ul.plain li::before{content:""; position:absolute; left:4px; top:21px; width:9px; height:9px; border-radius:2px; background:var(--ember)}
+.dark ul.plain li{border-bottom-color:rgba(255,255,255,.12)}
+ul.no li::before{background:none; content:"×"; color:var(--muted); font-size:1.3rem; line-height:1; top:15px; left:2px; width:auto; height:auto}
+
+/* ---------- organigramma ---------- */
+.org{border:1px solid var(--line-strong); border-radius:var(--r); overflow:hidden; margin:1.8em 0; background:#fff}
+.org .row{display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 18px; border-bottom:1px solid var(--line); font-size:.98rem}
+.org .row:last-child{border-bottom:0}
+.org .who{color:var(--muted); font-size:.92rem; text-align:right}
+.org .row.blank{background:var(--ember-tint); font-weight:600}
+.org .row.blank .who{color:var(--ember); font-weight:700; letter-spacing:.02em}
+.org .line{display:inline-block; min-width:86px; border-bottom:2px dashed var(--line-strong); height:1em}
+
+/* ---------- guarantee ---------- */
+/* componenti a fondo chiaro: il testo torna scuro anche dentro una sezione scura */
+.org,.two>div,.form,.card.tint,.guarantee{color:var(--ink)}
+.org .row.blank .who{color:var(--ember)}
+.form .hint,.form .note{color:var(--muted)}
+
+.guarantee{border:2px solid var(--ember); border-radius:var(--r); padding:clamp(24px,4.5vw,38px); background:#fff; margin:1.8em 0}
+.guarantee .big{font-family:Fraunces,Georgia,serif; font-size:clamp(1.35rem,3.8vw,1.85rem); font-weight:700; line-height:1.24; letter-spacing:-.02em; margin:0 0 .7em}
+.two{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line-strong); border:1px solid var(--line-strong); border-radius:10px; overflow:hidden; margin:1.5em 0}
+.two>div{background:#fff; padding:18px}
+.two h4{margin:0 0 8px; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-weight:700}
+.two p{margin:0; font-size:.96rem}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+
+/* ---------- founder ---------- */
+.founder{display:grid; grid-template-columns:200px 1fr; gap:32px; align-items:start}
+@media(max-width:640px){.founder{grid-template-columns:1fr; gap:22px}}
+.photo{aspect-ratio:4/5; border-radius:var(--r); background:linear-gradient(160deg,#EDE2D5,#DCCDBB); border:1px solid var(--line-strong);
+  display:grid; place-items:center; text-align:center; padding:16px; color:var(--muted); font-size:.82rem; line-height:1.5}
+@media(max-width:640px){.photo{max-width:200px}}
+
+/* ---------- form ---------- */
+.form{border:1px solid var(--line-strong); border-radius:var(--r); background:#fff; padding:clamp(22px,4vw,34px)}
+.field{margin-bottom:22px}
+.field>label{display:block; font-weight:600; font-size:.98rem; margin-bottom:8px}
+.field .hint{font-size:.85rem; color:var(--muted); margin:-4px 0 9px}
+input[type=text],input[type=email],input[type=tel]{width:100%; padding:12px 14px; border:1px solid var(--line-strong); border-radius:9px; font:inherit; font-size:1rem; background:#FFFDFB; color:var(--ink)}
+input:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--ember); outline-offset:2px}
+.opts{display:grid; gap:8px}
+.opt{display:flex; align-items:flex-start; gap:11px; padding:11px 14px; border:1px solid var(--line); border-radius:9px; cursor:pointer; background:#FFFDFB; font-size:.97rem}
+.opt:hover{border-color:var(--line-strong)}
+.opt input{margin:3px 0 0; accent-color:var(--ember); flex:0 0 auto}
+.opt:has(input:checked){border-color:var(--ember); background:var(--ember-tint)}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}}
+.btn{display:inline-block; width:100%; text-align:center; background:var(--ember); color:#fff; border:0; border-radius:10px;
+  padding:17px 24px; font:inherit; font-weight:600; font-size:1.05rem; cursor:pointer; letter-spacing:.005em}
+.btn:hover{background:var(--ember-dk)}.btn-cta.btn-cta-sm{max-width:none; white-space:nowrap; padding:12px 24px; font-size:.95rem}.btn-cta{display:inline-block; width:auto; max-width:330px; text-align:center; background:var(--ember); color:#fff;
+  border:0; border-radius:10px; padding:25px 30px; font:inherit; font-weight:600; font-size:1.8rem;
+  cursor:pointer; text-decoration:none; letter-spacing:.005em; line-height:1.3}
+.btn-cta:hover{background:var(--ember-dk)}
+.note{margin-top:14px; font-size:.88rem; color:var(--muted)}
+.reject{display:none; margin-top:18px; border:1px solid var(--line-strong); border-left:4px solid var(--ink); border-radius:10px; padding:18px 20px; background:#FFFDFB; font-size:.97rem}
+.reject.on{display:block}
+.reject p:last-child{margin-bottom:0}
+
+/* ---------- faq ---------- */
+details{border-bottom:1px solid var(--line); padding:4px 0}
+details summary{cursor:pointer; list-style:none; padding:16px 34px 16px 0; font-weight:600; font-size:1.03rem; position:relative}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+"; position:absolute; right:4px; top:14px; font-size:1.5rem; font-weight:400; color:var(--ember); line-height:1}
+details[open] summary::after{content:"–"}
+details .a{padding:0 0 18px; color:var(--ink-soft)}
+details .a p:last-child{margin-bottom:0}
+
+/* ---------- footer ---------- */
+footer{background:var(--dark); color:#9C918A; padding:52px 0 60px; font-size:.9rem}
+footer .brand{color:#F3EDE5}
+footer a{color:#C9BDB2}
+footer .tagline{color:#E8A87C}
+
 </style>
 </head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand"><strong>Pizzeria Prime</strong> Agency</div>
-    </header>
+<body class="">
+<iframe name="google_target_frame" style="display:none" title="invio al modulo Google, nascosto"></iframe>
 
-    <main>
-      <h1>Sala piena, <em>testa libera</em>.</h1>
-      <p class="lead">
-        Aiutiamo le pizzerie di quartiere a riempire i giorni morti e a costruire
-        un locale che funziona anche senza il titolare sempre dentro a contare i coperti.
-      </p>
-
-      <div class="divider"></div>
-
-      <h2>Cosa facciamo</h2>
-      <ul class="points">
-        <li>
-          <strong>Acquisizione sui giorni morti</strong>
-          <span>Campagne mirate per riempire martedì e mercoledì, non solo il sabato.</span>
-        </li>
-        <li>
-          <strong>Database clienti e riattivazione</strong>
-          <span>Chi è già venuto una volta, torna — senza dover ricominciare ogni mese da zero.</span>
-        </li>
-        <li>
-          <strong>Recensioni e reputazione</strong>
-          <span>Più recensioni vere, più fiducia prima ancora che qualcuno entri dalla porta.</span>
-        </li>
-        <li>
-          <strong>Offerte, non sconti</strong>
-          <span>Offerte pensate per far tornare le persone, non per svendere il lavoro fatto bene.</span>
-        </li>
-      </ul>
-
-      <div class="divider"></div>
-
-      <h2>Per chi</h2>
-      <p class="fit">
-        <strong>Pizzerie di quartiere</strong> con forno a legna, qualche anno di storia alle spalle
-        e un titolare che lavora davvero dentro al locale — non catene, non asporto puro,
-        non locali aperti da pochi mesi.
-      </p>
-
-      <div class="divider"></div>
-
-      <div class="cta">
-        <p>Vuoi capire se può funzionare anche per il tuo locale? Scrivici.</p>
-        <a class="btn" href="mailto:matteomarino@pizzeriaprimeagency.it">Scrivi a matteomarino@pizzeriaprimeagency.it</a>
-      </div>
-    </main>
-
-    <footer>
-      &copy; 2026 Pizzeria Prime Agency — <a href="mailto:matteomarino@pizzeriaprimeagency.it">matteomarino@pizzeriaprimeagency.it</a>
-    </footer>
+<header class="site">
+  <div class="brandrow">
+    <span class="brand">Pizzeria Prime Agency</span>
+    <span class="metodo">Metodo Sala Piena, Testa Libera</span>
+    <span class="tagline">niente da studiare: lo faccio io</span>
   </div>
-</body>
-</html>
+</header>
+
+<section class="hero">
+  <div class="wide">
+    <p class="pre">Per chi ha una pizzeria con la sala, e la riempie solo nel fine settimana.</p>
+    <p class="scena">Il sabato ne mandi indietro trenta.<br>Il martedì i coperti si contano sulle dita di due mani.</p>
+    <h1>Pensa invece a dover dire di no anche di&nbsp;martedì.</h1>
+    <p class="sub">Sembra una frase da venditore, ma la verità è che riempire nei giorni infrasettimanali non è una leggenda.<br><br>Non richiede delle "abilità segrete" che solo pochi conoscono e vogliono insegnarti a tutti i costi (letteralmente).<br><br>Richiede studio, certo. Ma soprattutto pratica, tempo e soldi per imparare come si fa.<br><br>Oppure basta una persona come me, che tutto questo l'ha già fatto.<br><br>I giorni morti, che spesso sono più di uno, li riempio io, lavorando con quello che nel tuo locale c'è già, senza che tu debba studiare, provare e sbagliare per mesi o per anni.</p>
+  </div>
+
+  <div class="videowrap">
+    <div class="video">
+      
+      <div class="vslot" id="vslot" data-yt="ID_DEL_VIDEO" role="button" tabindex="0" aria-label="Riproduci il video: il turno che nel tuo locale non copre nessuno">
+        <div class="play"><span></span></div>
+        <div class="t">Il turno che nel tuo locale non copre nessuno</div>
+        <div class="s">18 minuti. Nel primo minuto capisci se ti riguarda.</div>
+      </div>
+    </div>
+    <p class="vcap"><br></p>
+    <p style="text-align:center"><a href="#form" class="btn-cta">Prenota ora una consulenza gratuita →</a></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">DA DOVE PARTI</p>
+    <h2>Ti descrivo la tua serata di martedì. Se sbaglio, chiudi la pagina.</h2>
+
+    <p>Apri alle dieci, ma non per i clienti: per la banca, il commercialista, il tizio dei fornitori.</p>
+
+    <p>Alle diciannove e trenta la sala è pronta, il forno è a temperatura, in cucina ci sono le stesse persone del sabato.<br><br>Alle venti entra una coppia, <span style="font-family: Inter, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;">alle venti e trenta un tavolo da quattro e alle ventuno guardi la porta più di quanto guardi il forno.</span></p>
+
+    <p>Alle ventitré vai in cassa e prendi il quaderno.<br><br>Il gestionale ce l'hai (te l'hanno venduto), ma i numeri veri li fai a penna, perché a penna li capisci.</p>
+
+    <p>E in quel momento ti fai una delle tre domande: sarà il paese, sarà il caldo (o il freddo), o sarà la gente che non ha più soldi per mangiare fuori casa.</p>
+
+    <p>Poi c'è la quarta, quella che non ti fai davanti a nessuno: <em>forse sono io.</em></p>
+
+    <p>A casa probabilmente non ne parli più, perché l'ultima volta che ne hai parlato ti hanno detto «allora chiudi», e non era un consiglio.</p>
+
+    <p class="punch">Adesso che siamo d'accordo su dov'eri martedì, ti dico una cosa che quel martedì lo spiega. E non è nessuna delle quattro.</p>
+    <p style="text-align:center"><a href="#form" class="btn-cta btn-cta-sm">Prenota la tua consulenza gratuita →</a>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">PROBLEMA PRINCIPALE</p>
+    <h2>Il mercato si è mosso di due punti. Tu ne stai dichiarando trentacinque.</h2>
+
+    <p>Apri un gruppo di ristoratori adesso e trovi lo stesso post. Uno scrive che ha un calo enorme. E sotto, uno dietro l'altro:</p>
+
+    <blockquote>
+      <p>«Toscana, provincia di Livorno, calo pauroso, stimato circa nel 35/40% in meno.»<br>
+      «In Romagna è lo stesso: sto lavorando meno della metà dello scorso anno.»<br>
+      «Zona Dolomiti, calo a doppia cifra.»<br>
+      «A Foggia lavoro nettamente inferiore, e anche un calo dello scontrino medio.»</p>
+      <cite>Quattro commenti in un post da 59 risposte, gruppo di categoria, estate 2026</cite>
+    </blockquote>
+
+    <p>Dieci commenti così in poche ore.<br><br>E tu tiri un sospiro di quasi sollievo, perché anche se la barca potrebbe affondare da un momento all'altro, non sei solo.</p>
+
+    <p>Adesso i numeri veri. <strong>Rapporto Ristorazione 2026, FIPE-Confcommercio</strong>, che puoi aprire anche tu, pagina per pagina.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="n">+0,5%</div><div class="l">Spesa delle famiglie fuori casa, a 100 miliardi</div><div class="p">pagina 14</div></div>
+      <div class="stat"><div class="n">+3,2%</div><div class="l">Aumento dei listini della ristorazione</div><div class="p">pagina 13</div></div>
+      <div class="stat"><div class="n">−1%</div><div class="l">Imprese attive: 324.436</div><div class="p">pagina 10</div></div>
+    </div>
+
+    <p>+0,5% della spesa - i prezzi in aumento del +3,2% =<strong> -2,6% a volume</strong>.</p>
+
+    <p class="punch">-2,6%. NON -35%.</p>
+
+    <p>Chi dichiara trentacinque o quaranta non sta subendo il periodo: <strong>sta perdendo quota mentre il mercato avanza.</strong> E quella quota la prende qualcun altro.</p>
+
+    <p>Chi? Uno che stava nello stesso post, sotto gli stessi commenti:</p>
+
+    <blockquote>
+      <p>«Noi abbiamo lavorato gli ultimi due anni sul posizionamento e sull'ottimizzazione dei prezzi. In un anno in cui nella nostra zona stanno chiudendo un sacco di attività, noi stiamo avendo il nostro anno migliore, sia come fatturato che come utile.»</p>
+      <cite>Stesso anno. Stessa crisi. Stesso post.</cite>
+    </blockquote>
+
+    <p class="tiny">Una precisazione dovuta: il dato di Confcommercio è nazionale e riferito al 2025. Non è la misura del tuo locale, è l'ordine di grandezza. Serve a una cosa sola, a togliere a «è il periodo» il peso che gli stai mettendo sopra.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Perché non è bastato</p>
+    <h2>Sei cose comprate. Nessuna che ti abbia dato il lavoro fatto.</h2>
+
+    <p class="lede">Non è che non ci hai provato. Ci hai provato almeno sei volte.</p>
+
+    <table>
+      <thead><tr><th>Cosa hai comprato</th><th>Cosa ti ha dato</th><th>Perché non è bastato</th></tr></thead>
+      <tbody>
+        <tr><td>I corsi</td><td><strong>Sapere</strong><br>Appunti, slide, un metodo scritto anche bene</td><td>Un metodo va eseguito, e l'esecuzione sono ore. Hai comprato le istruzioni e ti sei ritrovato a fare anche l'operaio. <em>«Siamo teorici fenomenali, ma in pratica non abbiamo fatto nulla.»</em></td></tr>
+        <tr><td>Gestionali, software, e adesso l'AI</td><td><strong>Strumenti</strong><br>Un pannello in più, una password in più</td><td>Uno strumento non fa il lavoro: lo rende più veloce a chi lo fa. E configurarlo è tempo che non hai. Quante integrazioni hai ferme in questo momento?</td></tr>
+        <tr><td>Quello dei social, o il nipote coi video</td><td><strong>Contenuti</strong><br>Post, reel, un calendario editoriale</td><td>I contenuti non sono domanda. Nessuno di quei post ha mai chiesto a una persona di venire mercoledì. <em>«Un ragazzo che mi ha obbligato a fare questi video, e poi non è andata.»</em></td></tr>
+        <tr><td>I portali</td><td><strong>Clienti in affitto</strong><br>Coperti veri, ma non tuoi</td><td>Il contatto resta loro, la commissione è tua, e ti arriva gente che viene per lo sconto. <em>«Non vengono per il locale, vengono solo per lo sconto: non sono clienti in target.»</em> Il giorno che stacchi non ti resta niente.</td></tr>
+        <tr><td>Le promo fatte in casa</td><td><strong>Un'offerta</strong><br>Stampata, in cassa, in una cartellina</td><td>Un'offerta senza qualcuno che la porti alle persone giuste nel giorno giusto è un foglio. <em>«Le persone scaricano il coupon, ma ho un tasso di conversione veramente basso.»</em></td></tr>
+        <tr><td>Gli eventi d'istinto</td><td><strong>Un'idea</strong><br>La musica il mercoledì, il 2x1 sul piatto di punta</td><td>Un'idea senza un pubblico a cui dirla riempie la sala di gente che non voleva esserci. <em>«La gente si alzava e andava via.»</em></td></tr>
+      </tbody>
+    </table>
+
+    <p>Sapere, strumenti, contenuti, clienti in affitto, un'offerta, un'idea. Sei <strong>ingredienti</strong>.</p>
+
+    <p class="punch">Nessuna di quelle sei ti ha dato il lavoro fatto. E l'unico che poteva farlo eri tu, alle undici e mezza, stremato e anche un po' deluso.</p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <p class="kicker">Il punto di tutta questa pagina</p>
+    <h2>Prendi un foglio. Sessanta secondi.</h2>
+
+    <p>Scrivi le righe del tuo locale, e accanto a ognuna il nome di chi la copre.</p>
+
+    <div class="org">
+      <div class="row"><span>Forno e cucina</span><span class="who"><span class="line"></span></span></div>
+      <div class="row"><span>Sala</span><span class="who"><span class="line"></span></span></div>
+      <div class="row"><span>Cassa</span><span class="who"><span class="line"></span></span></div>
+      <div class="row"><span>Ordini e fornitori</span><span class="who"><span class="line"></span></span></div>
+      <div class="row"><span>Conti e fisco</span><span class="who">il commercialista</span></div>
+      <div class="row"><span>Manutenzione del forno</span><span class="who">il tecnico</span></div>
+      <div class="row blank"><span>Far entrare la gente il martedì, il mercoledì e il giovedì</span><span class="who">nessuno</span></div>
+    </div>
+
+    <p>Quella riga lì è bianca. Nel tuo locale, e in tutti quelli come il tuo, è bianca.</p>
+
+    <p>E siccome il turno c'è lo stesso (la gente il martedì o entra o non entra), <strong>lo copri tu.</strong> Nel ritaglio, dopo il servizio, alle undici e mezza.</p>
+
+    <p class="punch">Si chiama turno scoperto.</p>
+
+    <p>E spiega perché tutte e sei quelle cose ti hanno <em>aggiunto</em> lavoro invece di toglierlo: ti hanno dato strumenti migliori per fare un turno che continuavi a fare tu.</p>
+
+    <p>Una cosa te la dico chiara, perché conta.<br><br><strong>Un turno scoperto non è un problema di testa.<br></strong><br>Non è che non sei abbastanza imprenditore, non è il contenuto della tua scatola cranica.<br><br>È un problema di organico. E in una brigata, quando manca uno, non è che gli altri sono scarsi.</p>
+
+    <p class="punch">Manca uno.</p>
+    <p style="text-align:center"><a href="#form" class="btn-cta btn-cta-sm">Prenota la tua consulenza gratuita →</a>
+
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">E prima che tu pensi «allora riempiamolo»</p>
+    <h2>Un locale più pieno con quella riga ancora bianca non è un risultato.</h2>
+
+    <p>Nel gruppo del sistema di marketing più venduto d'Italia, una titolare ha scritto un post per annunciare che vendeva. Cominciava con <em>«scrivo questo post con il cuore in mano»</em>.</p>
+
+    <p>Sotto le ha risposto un altro titolare. Uno che quel sistema lo usa da anni. E a cui funziona.</p>
+
+    <blockquote>
+      <p>«Come ti capisco. Utilizzo il sistema ormai da anni, ma ho deciso anche io di vendere. Sono esausto. Sto perdendo la famiglia, e per quanto veda il mio locale mettere sempre un più a fine mese, non sarà mai corrisposto alle rinunce che ho fatto.»</p>
+    </blockquote>
+
+    <p>Locale pieno. Conti in ordine. Il più a fine mese. E vende. Perché il turno lo copriva ancora lui.</p>
+
+    <p>Un altro ristoratore l'ha scritto in un modo che non riesco a migliorare: <em>«è solo un altro modo di essere schiavi, con la differenza che questa volta il padrone porta il tuo nome».</em></p>
+
+    <p class="punch">Quindi no, qui non si vendono «più coperti». Più coperti, con il turno ancora scoperto, li paghi tu.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">La via d'uscita</p>
+    <h2>Un turno si copre da fuori. Come i conti.</h2>
+
+    <p>Ci sono due modi per coprire un turno. Impararlo e farlo tu: è quello che hai comprato sei volte, ed è il motivo per cui alle undici e mezza sei ancora lì.<br><br>Oppure farlo coprire a qualcuno da fuori.<br><br>Che poi è una cosa che hai già fatto senza nemmeno pensarci: i conti e il fisco non li hai studiati, hai preso il commercialista; la manutenzione del forno non l'hai studiata, hai preso il tecnico.<br><br>Non ti sei iscritto a un corso di partita doppia.</p>
+
+    <p>Non è una categoria nuova. È <strong>solo un ruolo che non è mai stato ufficializzato.</strong></p>
+
+    <p class="punch">Il corso finisce e ti lascia il lavoro. Il turno coperto finisce e ti lascia il risultato.</p>
+
+    <div class="card">
+      <h3>«Sì, ma oggi con l'AI me lo faccio da solo in quattro click.»</h3>
+      <p>Hai ragione, e la uso tutti i giorni anch'io. Fai una prova: chiedile la campagna del martedì. Trenta secondi e ce l'hai, e non sembra poi così orrenda.</p>
+      <p>Poi guarda cosa ti resta da fare:</p>
+      <ul class="plain">
+        <li>scegliere a chi mandarla</li>
+        <li>tirare fuori i contatti di chi ha già mangiato da te</li>
+        <li>impostare la campagna</li>
+        <li>scrivere l'offerta in modo che non sia uno sconto, che non è la stessa cosa</li>
+        <li>misurare chi è venuto davvero</li>
+        <li>correggere la settimana dopo</li>
+        <li>rifarlo la settimana dopo ancora.</li>
+      </ul>
+      <p><strong>L'AI ha abbassato il costo di produrre. Non ha abbassato di un minuto il costo di stargli dietro.</strong> E il tempo di stargli dietro è la cosa che non hai: 8 titolari su 10 lavorano più di 40 ore a settimana, 1 su 2 supera le 60, e il 55% della giornata se ne va in operatività.</p>
+      <p>Non ti mancano i click.<br><br>Ti manca qualcuno che li faccia ogni settimana mentre tu sei al forno.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Il metodo</p>
+    <h2>Sala Piena, Testa Libera. Tre ingranaggi, e l'ordine non è decorativo.</h2>
+
+    <div class="card">
+      <h3>1 · Il perimetro: un solo tipo di locale</h3>
+      <p>Ristorante-pizzeria o pizzeria di quartiere, con la sala, 50-90 coperti.<br><br>Non lo stellato, non la catena, non l'asporto puro.</p>
+      <p>Non è snobismo, è la condizione dell'ingranaggio due.<br><br>Su un locale sempre uguale le leve che spostano l'infrasettimanale sono poche e sempre le stesse:</p>
+      <ul class="plain">
+        <li>chi ha già mangiato da te</li>
+        <li>il giorno scelto</li>
+        <li>un'offerta che non è uno sconto</li>
+        <li>le recensioni locali.</li>
+      </ul>
+      <p>Non c'è da scoprire cosa funziona a ogni cliente nuovo, e soprattutto <strong>si sa quanto vale un coperto lì</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h3>2 · Il contatore: il rientro economico si misura, e si decide prima di cominciare</h3>
+      <p>Prima che io cominci, decidiamo insieme e mettiamo per iscritto <strong>come si misura se sei rientrato</strong>.<br><br>Non «come sta andando», non «se sei soddisfatto».<br><br>Una formula concordata, con i tuoi numeri dentro, firmata da tutti e due, che si legge in qualunque momento e dice una cosa sola: sei rientrato, o non ancora.</p>
+      <p>Tre cose di quella formula te le dico adesso, perché sono le tre che di solito decidono se una garanzia è vera. E sono tutte e tre a mio sfavore.</p>
+      <ul class="plain">
+        <li><strong>Si conta solo chi si è seduto e ha mangiato</strong>, e solo se c'è una traccia che dice che è arrivato da noi. Servono tutte e due. Una prenotazione che non si presenta non conta, neanche se è arrivata da una nostra campagna: il no-show è un problema mio, non tuo.</li>
+        <li><strong>Si conta sul margine, non sull'incasso.</strong> «Hai incassato tot» con la materia prima ancora da pagare non vuol dire che sei rientrato, e il primo a fartelo notare sarebbe il tuo commercialista.<br><br>Sull'utile netto non si conta neanche: quello include affitto, stipendi e utenze, cioè costi che su una sera in cui sei già aperto hai già pagato.<br><br>Contarli vorrebbe dire prometterti decine di coperti in più a sera, e chi te lo promette ti sta mentendo spudoratamente.</li>
+        <li><strong>Lo scontrino medio si congela a oggi.</strong> Se durante il percorso alzi i prezzi, l'aumento resta fuori dal contatore.<br><br>Così nessuno può dire che hai comprato un ritocchino ai prezzi spacciandolo per un risultato.</li>
+      </ul>
+      <p>La formula per esteso, con i tuoi numeri dentro, si compila insieme in call, davanti a te, e si firma prima che io cominci.<br><br>Non è roba da pagina web: è roba da foglio, in due.</p>
+    </div>
+
+    <div class="card">
+      <h3>3 · Il traguardo: non si chiude a scadenza, si chiude col numero</h3>
+      <p>Gli altri lavorano a mesi: tre mesi, sei mesi, e alla fine si tirano le somme.<br><br>Qui la fine è il numero: se il numero non c'è, il percorso non è finito. <br><br>E finché non è finito, io continuo a lavorare senza che tu paghi.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <p class="kicker">La garanzia</p>
+    <h2>Non puoi perdere un euro. Né quello che dai a me, né quello che mettiamo in pubblicità.</h2>
+
+    <p>L'investimento che il contatore deve far rientrare non è solo il mio compenso: è <strong>il compenso più il budget pubblicitario</strong>. Il budget lo paghi tu, direttamente al canale, con la tua carta: non passa da me e non ci prendo niente sopra.<br><br>Ma sta dentro il conto lo stesso, perché è un soldo che esce dalla tua tasca.</p>
+
+    <p>Ed è l'unico modo per cui quella frase lassù è vera. Senza il budget dentro, avrebbe un asterisco.</p>
+
+    <div class="two">
+      <div><h4>Al 90° giorno, se il contatore è a quota</h4><p>L'obbligo di lavorare gratis si chiude. Il rapporto no: il servizio prosegue come prima.</p></div>
+      <div><h4>Al 90° giorno, se non è a quota</h4><p>Continuo a lavorare senza che tu paghi, finché non ci arriviamo. Solo dopo riprendi a pagare.</p></div>
+    </div>
+
+    <p>Il contatore parte dal giorno uno, senza finestre di taratura, e si legge insieme in ogni report e in ogni call.</p>
+
+    <p>E questa la metto in chiaro perché è la differenza fra una garanzia e uno slogan: <strong>il pavimento è il pareggio, non un guadagno.</strong> Non ti sto dicendo che ci guadagni per forza. Ti sto dicendo che sotto lo zero non ci vai, e che qualunque cosa succeda ti restano il database dei tuoi clienti e le recensioni, che sono tuoi per sempre.</p>
+
+    <h3 style="margin-top:2em">Le condizioni, dette adesso e non dopo la firma</h3>
+
+    <p>Ci sono cose che, se cambiano, cambiano il conto. Te le dico adesso apposta: se le scopri dopo diventano scuse mie, e io non voglio scuse. Voglio un conto che torna.</p>
+
+    <p><strong>Tre cose all'inizio, una volta sola:</strong> i tuoi numeri veri, le chiavi di quello che è già tuo, la tua lista clienti o il via libera a costruirla.</p>
+    <p><strong>Tre che devono restare accese:</strong> il budget concordato attivo, le prenotazioni accolte e segnate, un'ora a settimana per la call.</p>
+    <p><strong>E cinque cose che mi devi solo dire</strong> se cambiano. Non chiedere, non far approvare: dire. Se chiudi o cambi i giorni, se cambi menù o prezzi in modo serio, se fai una promozione tua sui giorni su cui stiamo lavorando, se entra un'altra agenzia sugli stessi canali, se cambia chi sta in cucina o in sala.</p>
+
+    <blockquote>
+      <p>Queste non sono clausole per tirarmi indietro. Sono le cose che, se cambiano, cambiano il conto, e allora il conto lo rifacciamo insieme, davanti a te. Non lo cancello.</p>
+    </blockquote>
+  </div>
+</section>
+
+<section style="padding-top:45px;padding-bottom:45px">
+  <div class="wrap" style="text-align:center">
+    <p style="margin:0"><a href="#form" style="font-weight:700; font-size:1.4rem">Se hai già capito, prenota qui la tua consulenza gratuita →</a><br>
+    <span class="small">Sotto c'è il resto: il confronto con quello che hai già provato, cosa non ti chiedo, e per chi questo metodo non va bene.</span></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Il confronto</p>
+    <h2>Non è che gli altri non ti garantiscono niente. È che decidono loro, e decidono alla fine.</h2>
+
+    <table>
+      <thead><tr><th>Come funziona di solito</th><th>Perché qui è diverso</th></tr></thead>
+      <tbody>
+        <tr><td>«Ti do il sistema, poi lo applichi tu.»</td><td>Ti consegna il lavoro, non il risultato. Funziona su chi ha le ore per eseguirlo, che è la sola risorsa che non hai.</td></tr>
+        <tr><td>«Con quattro click te lo fai da solo.»</td><td>Ha abbassato il costo di produrre, non quello di stargli dietro. Lo strumento va configurato, collegato, letto e corretto: un altro turno sulle stesse spalle.</td></tr>
+        <tr><td>«Ti seguo per tre mesi, senza vincoli.»</td><td>«Senza vincoli» non è una garanzia, è un'uscita. Protegge chi se ne può andare, non chi ha pagato.</td></tr>
+        <tr><td>«Se al termine non sei soddisfatto, lavoriamo gratis.»</td><td>Ce n'è più di uno che te lo scrive, ed è giusto saperlo. Il punto è un altro: <em>soddisfatto</em> lo decidi alla fine, e lo decidete in due, e uno dei quali ha interesse a dire che è andata bene. E ha una scadenza: al terzo mese si chiude comunque.</td></tr>
+        <tr><td>«Moltiplichiamo l'investimento di quindici, trenta, quaranta volte.»</td><td>Promessa enorme, garanzia zero. Il moltiplicatore che scrivo io è <strong>uno</strong>, ed è l'unico che qualcuno abbia messo per iscritto <em>prima</em> di cominciare. Chiedi a loro di scriverti il quaranta.</td></tr>
+        <tr><td>«Seguiamo quattrocento ristoranti.»</td><td>Chi prende qualunque formato non può prevedere il rientro di un formato specifico. E chi prende due locali nella stessa zona sposta gli stessi clienti da una parte all'altra.</td></tr>
+        <tr><td>«Ti curo la comunicazione.»</td><td>Produce visibilità, non prenotazioni in un giorno scelto. Fra un reel e un coperto di mercoledì non c'è nessun contatore.</td></tr>
+      </tbody>
+    </table>
+
+    <p class="punch">Quello che resta mio è una riga sola: il numero è firmato prima che io cominci, e la fine la decide lui.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Prima di dirti cosa faccio io</p>
+    <h2>Cosa non ti chiedo.</h2>
+
+    <ul class="plain no">
+      <li><strong>Non ti chiedo di imparare una piattaforma.</strong> Campagne, messaggi, automazioni, recensioni: quella roba la uso io, da casa mia, e tu ricevi un report. Dalle tue mani passano le prenotazioni e la sala, e non è una materia nuova da studiare: è la stessa cosa che già fate, che arriva in un posto solo invece che fra il telefono, il quaderno e i messaggi. E se preferisci tenerti il tuo modo, te lo tieni. Non è una condizione.</li>
+      <li><strong>Non ti chiedo di scrivere ai clienti uno per uno.</strong> Ai tuoi clienti ci scrivo io, con il tuo nome e con parole che approvi.</li>
+      <li><strong>Non ti chiedo di firmare un vincolo di dodici mesi.</strong> Il trimestre è un trimestre. Dopo, se vuoi smettere smetti, senza penali e senza telefonate.</li>
+      <li><strong>Non ti chiedo di cambiare il menù, i prezzi, la squadra o il modo in cui fai la pizza.</strong> Se poi ne parliamo, ne parliamo perché conviene a te.</li>
+      <li><strong>Non ti chiedo di credermi sulla parola.</strong> Prima di partire scriviamo insieme come si misura se sei rientrato. E finché non ci arrivi, continuo a lavorare senza farti pagare.</li>
+    </ul>
+
+    <h3 style="margin-top:2.2em">E le cose che invece ti chiedo</h3>
+    <p><strong>Tre all'inizio, una volta sola.</strong> I tuoi numeri veri: scontrino medio, food cost, coperti dei giorni deboli. Senza quei tre il contatore non esiste, e senza contatore la mia garanzia è una frase. Le chiavi di quello che è già tuo: la pagina Facebook e Instagram, la scheda Google, il modo in cui segni le prenotazioni. E la tua lista clienti, anche disordinata, anche su un quaderno, o il via libera a costruirla da zero.</p>
+    <p><strong>Tre che devono restare accese.</strong> Il budget concordato, attivo. Che le prenotazioni vengano accolte e segnate: quello che non è segnato non lo conto, ed è una regola a tuo favore, perché vuol dire che ti conto solo quello che ti posso dimostrare. E un'ora a settimana, sempre lo stesso giorno, che scegli tu.</p>
+    <p><strong>E cinque cose che mi devi solo dire</strong> se cambiano. Non chiedere, non far approvare. È il tuo locale.</p>
+    <p style="text-align:center"><a href="#form" class="btn-cta btn-cta-sm">Prenota la tua consulenza gratuita →</a>
+
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Chi c'è dietro</p>
+    <h2>Ci sono passato anch'io, dal lato sbagliato. E spendendo parecchio.</h2>
+
+    <div class="founder">
+      
+      <div class="photo">La tua foto va qui.<br>In faccia, vera, non in posa.</div>
+      <div>
+        <p>Mi chiamo Matteo Marino. Sono nel mondo del marketing dal 2020. Due anni fa ho provato ad aprire un'agenzia per ristoratori.</p>
+        <p>Fra corsi, percorsi e formazione ho speso <strong>fra i trenta e i quarantamila euro</strong>. Sapevo tantissimo e applicavo pochissimo: ero il teorico per eccellenza. Mi ero raccontato che bastasse essere più preparato e più bravo degli altri.<br><br>È vero, ma nella pratica, non nella teoria. Quella differenza mi è costata tempo e soldi.</p>
+        <p>E la parte che fa più rabbia: <strong>erano gli stessi corsi a dirmi di applicare.</strong> Me l'avevano scritto. Avevo il paradigma sbagliato, e continuavo a comprare il pezzo che avevo già.</p>
+        <p>Mi sono fermato quando i soldi erano finiti e non stavo ancora guadagnando.</p>
+        <p>Non sto qui a dirti che poi ce l'ho fatta. Ti dico cos'ho cambiato: ho smesso di comprare cose da studiare e ho cominciato a fare. Ed è per questo che non ti vendo un corso. <strong>Niente da studiare: lo faccio io.</strong></p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:2.4em">
+      <h3>«Ma è tutto da remoto. Non ci vediamo mai?»</h3>
+      <p>È vero: il servizio è da remoto e copre tutta Italia. La visita di persona non è inclusa, tranne alcuni casi eccezionali.</p>
+      <p>Quello che c'è al posto della visita è una cadenza, e va per iscritto <strong>prima</strong> che tu firmi:</p>
+      <ul class="plain">
+        <li>Un gruppo WhatsApp diretto con me. Non un account assistenza, non un ticket.</li>
+        <li>Risposta in giornata.</li>
+        <li>Una call a settimana, giorno e ora li scegli tu.</li>
+        <li>Un report a settimana, che leggiamo insieme in quella call.</li>
+      </ul>
+      <p>E poi c'è la cosa che vale più della cadenza: <strong>uno che se ne va dopo tre mesi non si impegna a restare finché non sei rientrato.</strong></p>
+      <p style="text-align:center"><a href="#form" class="btn-cta btn-cta-sm">Prenota la tua consulenza gratuita →</a>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Onestà preventiva</p>
+    <h2>Per chi questo metodo non è.</h2>
+
+    <p class="lede">Rifiutare clienti è la cosa più economica che posso fare per dimostrarti che dico sul serio.</p>
+
+    <p>Non è per te se hai un <strong>bar</strong>, un <strong>forno</strong>, o fai <strong>solo asporto</strong>: non c'è la sala, e la sala è metà del metodo. Se sei in un <strong>centro storico turistico</strong>, dove la domanda arriva dal passeggio e non dal paese. Se hai una <strong>catena o più locali</strong>. Se <strong>non lavori nel tuo locale</strong>. E se stai cercando clienti da sconto, perché non è quello che faccio.</p>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">L'offerta</p>
+    <h2>Un turno coperto, non un pacchetto.</h2>
+
+    <ul class="plain">
+      <li><strong>L'acquisizione sui giorni morti.</strong> Campagne a risposta diretta su Facebook e Instagram, con l'offerta scritta da me. Offerta, non sconto: non sono la stessa cosa.</li>
+      <li><strong>Il tuo database clienti</strong>, costruito da zero se non ce l'hai, e la prima riattivazione, che di solito è la cosa che rende per prima.</li>
+      <li><strong>La scalata delle recensioni su Google.</strong> Non «ti curiamo la reputazione»: un sistema per chiederle a chi è già venuto ed è stato bene.</li>
+      <li><strong>La riscrittura delle tue offerte</strong>, perché uno sconto ti porta gente che torna solo al prossimo sconto.</li>
+      <li><strong>Un evento infrasettimanale a trimestre</strong>, costruito su un pubblico che esiste già. Non a istinto.</li>
+      <li><strong>Un report tracciato ogni settimana</strong>, e la call in cui lo leggiamo insieme.</li>
+      <li><strong>Il sistema di prenotazioni e di database clienti, e lo pago io.</strong> Prenotazioni online e telefoniche senza commissioni, prenotazione da Google, mappa tavoli e lista d'attesa, reminder automatici contro i no-show, la lista dei tuoi clienti con visite e preferenze, recensioni certificate, fidelity, gift card, menù digitale, asporto e delivery senza commissioni. La fattura arriva a me, non a te. Al tuo staff resta solo la gestione della sala, cioè quello che già fa: cambia dove ne tiene traccia, non cosa fa. E se preferisci il tuo modo, te lo tieni: quel sistema lo uso io per la parte di marketing.</li>
+      <li><strong>Il database dei tuoi clienti è tuo, sempre.</strong> Non è una concessione di fine rapporto, è la regola da sapere prima di firmare: i clienti che raccogliamo sono del locale. Finché tieni il sistema te lo tieni, anche se non lavori più con me. E se lo molli, che sia tu a lasciare me o io a lasciare te, ti estraggo il database e te lo consegno.</li>
+    </ul>
+
+</section>
+
+<section id="form" class="dark">
+  <div class="wrap">
+    <p class="kicker">Se ti sembra roba tua</p>
+    <h2>Dimmi tre cose sul tuo locale.</h2>
+
+    <p>Cinque minuti. Serve a me per capire se sei nel perimetro, e serve a te per non perdere un'ora in una call che non ti riguarda. Se sei fuori perimetro te lo dico subito, e ti dico anche perché.</p>
+
+    <div class="form" style="margin-top:2em">
+      <form id="qualifica" novalidate="">
+        <div class="grid2">
+          <div class="field">
+            <label for="nome">Nome e cognome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required="">
+          </div>
+          <div class="field">
+            <label for="locale">Nome del locale</label>
+            <input type="text" id="locale" name="locale" required="">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="citta">Città e provincia</label>
+          <input type="text" id="citta" name="citta" required="">
+        </div>
+
+        <div class="field">
+          <label>Che tipo di locale è</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="tipo" value="ristorante-pizzeria" data-ok="1"><span>Ristorante-pizzeria con sala</span></label>
+            <label class="opt"><input type="radio" name="tipo" value="pizzeria-sala" data-ok="1"><span>Pizzeria con sala</span></label>
+            <label class="opt"><input type="radio" name="tipo" value="asporto" data-ok="0"><span>Pizzeria d'asporto o da banco</span></label>
+            <label class="opt"><input type="radio" name="tipo" value="bar" data-ok="0"><span>Bar</span></label>
+            <label class="opt"><input type="radio" name="tipo" value="forno" data-ok="0"><span>Forno</span></label>
+            <label class="opt"><input type="radio" name="tipo" value="altro" data-ok="0"><span>Altro</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Coperti medi in sala, da martedì a giovedì</label>
+          <p class="hint">Una media a occhio va benissimo. È il numero che conta più di tutti gli altri.</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="coperti" value="&lt;10"><span>Meno di 10</span></label>
+            <label class="opt"><input type="radio" name="coperti" value="10-20"><span>Fra 10 e 20</span></label>
+            <label class="opt"><input type="radio" name="coperti" value="20-35"><span>Fra 20 e 35</span></label>
+            <label class="opt"><input type="radio" name="coperti" value="&gt;35"><span>Più di 35</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Da quanti anni è aperto</label>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="anni" value="&lt;3"><span>Meno di 3</span></label>
+            <label class="opt"><input type="radio" name="anni" value="3-5"><span>Fra 3 e 5</span></label>
+            <label class="opt"><input type="radio" name="anni" value="5-10"><span>Fra 5 e 10</span></label>
+            <label class="opt"><input type="radio" name="anni" value="&gt;10"><span>Più di 10</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Cosa hai già provato</label>
+          <p class="hint">Puoi segnarne più di una. Non è un giudizio: mi serve per non ripeterti cose che hai già sentito.</p>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="provato" value="corsi"><span>Corsi o percorsi di formazione</span></label>
+            <label class="opt"><input type="checkbox" name="provato" value="agenzia"><span>Un'agenzia o un social media manager</span></label>
+            <label class="opt"><input type="checkbox" name="provato" value="portali"><span>TheFork o altri portali</span></label>
+            <label class="opt"><input type="checkbox" name="provato" value="promo"><span>Promo e coupon fatti in casa</span></label>
+            <label class="opt"><input type="checkbox" name="provato" value="eventi"><span>Eventi e serate</span></label>
+            <label class="opt"><input type="checkbox" name="provato" value="software"><span>Gestionali o software</span></label>
+            <label class="opt"><input type="checkbox" name="provato" value="niente"><span>Niente di tutto questo</span></label>
+          </div>
+        </div>
+
+        <div class="grid2">
+          <div class="field">
+            <label for="tel">Telefono (WhatsApp)</label>
+            <input type="tel" id="tel" name="tel" autocomplete="tel" required="">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required="">
+          </div>
+        </div>
+
+        <p class="tiny" style="margin:0 0 16px">I tuoi dati li uso solo per capire se ti riguarda e fissare la call: niente liste, niente rivendite. <a href="privacy.html" target="_blank" rel="noopener">Come li tratto</a>.</p>
+        <button class="btn" type="submit">Guarda gli orari disponibili</button>
+        <p class="note">Dopo il form vedi il mio calendario. La call dura quaranta minuti, con la camera accesa da tutte e due le parti se per te va bene. Non è una presentazione: è il momento in cui facciamo il conto del tuo martedì con i tuoi numeri, e scriviamo insieme come si misura il rientro. Quel foglio te lo porti via comunque, anche se poi non se ne fa niente.</p>
+
+        <div class="reject" id="reject">
+          <p><strong>Ti rispondo subito, così non ti faccio perdere tempo.</strong></p>
+          <p id="rejectWhy"></p>
+          <p>Non perché gli altri formati non funzionino. Perché le leve sono diverse, e su quelle io non ti posso garantire niente, e una garanzia che non posso mantenere non te la scrivo. Preferisco dirtelo adesso che dopo un'ora di call.</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Le domande che mi fanno sempre</p>
+    <h2>Quelle vere, non quelle comode.</h2>
+
+    <details open=""><summary>Quanto costa, alla fine?</summary><div class="a">
+      <p>Meno di un cameriere.</p>
+    </div></details>
+
+    <details open=""><summary>Quest'anno sto facendo il 35% in meno. Proprio adesso devo aggiungere un costo fisso?</summary><div class="a">
+      <p>È la domanda giusta, e la risposta non è «fidati». La risposta è che il costo non resta un costo se rientra, ed è esattamente il motivo per cui il rientro si mette per iscritto prima, invece di parlarne a fine trimestre. Se il conto non ti torna quando lo facciamo insieme, non firmi.</p>
+    </div></details>
+
+    <details><summary>La mia macchina non corre ancora abbastanza. Prima sistemo la sala, poi ne parliamo.</summary><div class="a">
+      <p>Su questo ti do metà ragione, ed è la metà pericolosa. Marketing e gestionali sono un acceleratore, e un acceleratore su una macchina ferma non serve. Ma qui non ti sto vendendo un acceleratore: quella riga dell'organigramma non è mai stata scritta. Non ti manca un pezzo che va più forte. Ti manca un pezzo che non c'è mai stato.</p>
+    </div></details>
+
+    <details><summary>E se prenotano e poi non si presentano? Quello me lo conti lo stesso?</summary><div class="a">
+      <p>No. <strong>Ti conto solo chi si è seduto.</strong> Se prenota e poi non viene, quello è un problema mio, non tuo. E infatti i reminder e la carta a garanzia contro i no-show sono dentro il sistema che pago io.</p>
+    </div></details>
+
+    <details><summary>E se mi porti gente da sconto? Io quelli non li voglio più.</summary><div class="a">
+      <p>Nemmeno io. Un'offerta e uno sconto non sono la stessa cosa: lo sconto compra una persona una volta e la abitua ad aspettare il prossimo, un'offerta dà un motivo per venire in un giorno preciso e lascia un contatto nel tuo database. Sui portali siamo d'accordo: non vengono per il locale, vengono per lo sconto.</p>
+    </div></details>
+
+    <details><summary>Non ho tempo per starti dietro. Ogni cosa nuova mi ha aggiunto lavoro, non tolto.</summary><div class="a">
+      <p>Un'ora a settimana, sempre lo stesso giorno e la stessa ora, che scegli tu. E le prenotazioni segnate, che già le segni. Tutto il resto è mio. Se scopri che ti sto aggiungendo lavoro, dimmelo in quella call: vuol dire che ho sbagliato io il lavoro.</p>
+    </div></details>
+
+    <details><summary>Devo parlarne con mio socio, mia moglie, il commercialista.</summary><div class="a">
+      <p>Normale, ed è giusto così. Per questo il foglio che compiliamo in call è pensato per essere <strong>girato</strong>, non ripetuto a voce: è fatto con il conto a margine di contribuzione, che è il primo controllo che farebbe un commercialista. Chi deve convincere il commercialista a memoria perde. Chi gli inoltra un foglio, no.</p>
+    </div></details>
+
+    <details><summary>Quanto ci mette a rientrare?</summary><div class="a">
+      <p>Ci puntiamo entro i primi trenta giorni, ma non è quello che ti prometto: le promesse sui tempi le fa chi non le deve mantenere. <strong>Quello che ti metto per iscritto sono novanta giorni.</strong> Se al novantesimo il contatore non è a quota, continuo a lavorare senza che tu paghi finché non ci arriviamo.</p>
+    </div></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><span class="brand" style="font-family:Fraunces,Georgia,serif;font-weight:700">Pizzeria Prime Agency</span><br>
+    <span class="tagline" style="font-style:italic">niente da studiare: lo faccio io</span></p>
+    <p>Matteo Marino · P. IVA 02789310691 · Via Pantaleone Rapino 24, 66026 Ortona (CH)<br>
+    <a href="mailto:matteomarino@pizzeriaprimeagency.it">matteomarino@pizzeriaprimeagency.it</a> · <a href="tel:+393758319640">+39 375 831 9640</a></p>
+    <p><a href="privacy.html">Privacy policy</a> · <a href="cookie.html">Cookie policy</a> · <a href="termini.html">Termini</a></p>
+    <p class="tiny" style="max-width:52em;margin-top:26px">Le citazioni dei ristoratori riportate in questa pagina sono tratte da discussioni pubbliche in gruppi di categoria e sono riportate senza nome. I dati di settore provengono dal Rapporto Ristorazione 2026 di FIPE-Confcommercio, con l'indicazione della pagina.</p>
+  </div>
+</footer>
+
+<script>
+const CALENDLY = "https://calendly.com/pizzeriaprimeagency/consulenza";
+const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSdzxt93a5q-VHRS_mCYnPl8BcUs8lOKyaThcTv7J7w3V8wNlw/formResponse";
+
+const ENTRY_MAP = {
+  nome:    "entry.1203909884",
+  locale:  "entry.519185324",
+  citta:   "entry.1564352577",
+  tipo:    "entry.940232929",
+  coperti: "entry.727566506",
+  anni:    "entry.474361236",
+  provato: "entry.1466441447",
+  tel:     "entry.1928955910",
+  email:   "entry.202451610"
+};
+
+/* ------------------------------------------------------------------
+   Google non accetta un valore qualsiasi: per le domande a scelta
+   vuole l'ETICHETTA ESATTA dell'opzione, parola per parola. Se arriva
+   una stringa diversa (es. "10-20" invece di "Fra 10 e 20") scarta
+   tutta la risposta. Qui traduciamo i valori tecnici della pagina
+   nelle etichette vere del modulo (lette dal modulo live il 20/09/2026).
+   ⚠️ Se cambi un'opzione nel Google Form, cambiala anche qui.
+   ------------------------------------------------------------------ */
+const VALUE_MAP = {
+  tipo: {
+    "ristorante-pizzeria": "Ristorante-pizzeria con sala",
+    "pizzeria-sala":       "Pizzeria con sala"
+  },
+  coperti: {
+    "<10":   "Meno di 10",
+    "10-20": "Fra 10 e 20",
+    "20-35": "Fra 20 e 35",
+    ">35":   "Pi\u00f9 di 35"
+  },
+  anni: {
+    "<3":   "Meno di 3",
+    "3-5":  "Fra 3 e 5",
+    "5-10": "Fra 5 e 10",
+    ">10":  "Pi\u00f9 di 10"
+  },
+  provato: {
+    "corsi":    "Corsi o percorsi di formazione",
+    "agenzia":  "Un'agenzia o un social media manager",
+    "portali":  "TheFork o altre portali",
+    "promo":    "Promo o coupon fatti a casa",
+    "eventi":   "Eventi e serate",
+    "software": "Gestionali o software",
+    "niente":   "Niente di tutto questo"
+  }
+};
+const trad = (campo, v) => (VALUE_MAP[campo] && VALUE_MAP[campo][v]) || v;
+
+const form   = document.getElementById("qualifica");
+const reject = document.getElementById("reject");
+const why    = document.getElementById("rejectWhy");
+
+const MOTIVI = {
+  asporto: "Questo metodo lavora su un solo tipo di locale: il ristorante-pizzeria o la pizzeria con la sala. Senza la sala salta met\u00e0 del metodo, perch\u00e9 la leva \u00e8 il coperto della sera infrasettimanale.",
+  bar:     "Questo metodo lavora su un solo tipo di locale: il ristorante-pizzeria o la pizzeria con la sala. Su un bar la domanda funziona in un altro modo, e io su quello non ho niente da garantirti.",
+  forno:   "Questo metodo lavora su un solo tipo di locale: il ristorante-pizzeria o la pizzeria con la sala. Su un forno la domanda funziona in un altro modo, e io su quello non ho niente da garantirti.",
+  altro:   "Questo metodo lavora su un solo tipo di locale: il ristorante-pizzeria o la pizzeria con la sala."
+};
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  reject.classList.remove("on");
+
+  const tipo = form.querySelector('input[name="tipo"]:checked');
+  if (!tipo) {
+    alert("Segna che tipo di locale \u00e8: \u00e8 la cosa che mi dice subito se posso esserti utile.");
+    return;
+  }
+  if (tipo.dataset.ok === "0") {
+    why.textContent = MOTIVI[tipo.value];
+    reject.classList.add("on");
+    reject.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  /* Nel Google Form TUTTE le domande sono obbligatorie: se una resta
+     vuota, Google scarta l'intera risposta senza dire niente.
+     Quindi le controlliamo qui prima di inviare. */
+  if (!form.querySelector('input[name="coperti"]:checked')) {
+    alert("Segna quanti coperti fai in media da marted\u00ec a gioved\u00ec.");
+    return;
+  }
+  if (!form.querySelector('input[name="anni"]:checked')) {
+    alert("Segna da quanti anni \u00e8 aperto il locale.");
+    return;
+  }
+  if (!form.querySelector('input[name="provato"]:checked')) {
+    alert("Segna almeno una cosa fra quelle che hai gi\u00e0 provato (se non hai provato niente, c'\u00e8 l'ultima voce).");
+    return;
+  }
+
+  /* I cinque campi scritti a mano. Il form ha "novalidate", quindi il browser
+     non li controlla: se uno resta vuoto Google scarta TUTTA la risposta in
+     silenzio e il lead sparisce dal foglio, mentre la persona finisce su
+     Calendly senza che tu sappia chi è. Quindi si controllano qui. */
+  const OBBLIGATORI = [
+    ["nome",   "Scrivi il tuo nome e cognome."],
+    ["locale", "Scrivi il nome del locale."],
+    ["citta",  "Scrivi citt\u00e0 e provincia."],
+    ["tel",    "Lascia un numero di telefono: \u00e8 il modo pi\u00f9 veloce che ho per risponderti."],
+    ["email",  "Lascia la tua email: se il calendario non si apre, ti scrivo l\u00ec."]
+  ];
+  for (var i = 0; i < OBBLIGATORI.length; i++) {
+    var campo = OBBLIGATORI[i][0], messaggio = OBBLIGATORI[i][1];
+    var el = form.elements[campo];
+    if (!el || !el.value.trim()) {
+      alert(messaggio);
+      if (el) { el.focus(); el.scrollIntoView({ behavior: "smooth", block: "center" }); }
+      return;
+    }
+  }
+  var emailEl = form.elements["email"];
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailEl.value.trim())) {
+    alert("Controlla l'email: manca qualcosa. Serve nel formato nome@dominio.it");
+    emailEl.focus();
+    emailEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
+
+  const dati = new FormData(form);
+
+  const gData = new URLSearchParams();
+  Object.entries(ENTRY_MAP).forEach(([campo, entry]) => {
+    if (campo === "provato") {
+      dati.getAll("provato").forEach(v => gData.append(entry, trad("provato", v)));
+    } else {
+      gData.append(entry, trad(campo, dati.get(campo) || ""));
+    }
+  });
+
+  const nome  = encodeURIComponent(dati.get("nome")  || "");
+  const email = encodeURIComponent(dati.get("email") || "");
+  const calendlyUrl = CALENDLY + "?name=" + nome + "&email=" + email;
+
+  /* ------------------------------------------------------------------
+     INVIO — testato dal vivo il 20/09/2026 su modulo pubblicato.
+     Si usa fetch in modalita' "no-cors" con keepalive:true.
+       - no-cors: Google non restituisce header CORS, quindi la risposta
+         NON e' leggibile. E' normale e non e' un errore: l'invio parte
+         comunque e la risposta arriva in Google. Non aspettarti conferme.
+       - keepalive: true: il browser porta a termine la richiesta anche
+         mentre la pagina sta gia' saltando su Calendly. E' questo che
+         risolve la corsa fra invio e redirect.
+     ⚠️ NON tornare alla tecnica del <form> nascosto puntato a un iframe:
+     e' stata provata il 20/09/2026 e le risposte NON arrivavano in Google,
+     mentre con fetch arrivavano. L'iframe resta nella pagina ma non si usa.
+     ------------------------------------------------------------------ */
+  const btn = form.querySelector('[type="submit"]');
+  if (btn) { btn.disabled = true; btn.dataset.testo = btn.textContent; btn.textContent = "Un attimo\u2026"; }
+
+  let andato = false;
+  const vai = () => { if (andato) return; andato = true; window.location.href = calendlyUrl; };
+
+  /* Rete di sicurezza: se per qualsiasi motivo la fetch si pianta,
+     dopo 2,5 secondi si va su Calendly lo stesso. Meglio una risposta
+     persa che un lead bloccato su una pagina ferma. */
+  setTimeout(vai, 2500);
+
+  fetch(GOOGLE_FORM_ACTION, {
+    method: "POST",
+    mode: "no-cors",
+    body: gData,
+    keepalive: true
+  }).then(vai).catch(vai);
+});
+</script>
+
+<script>
+(function () {
+  var slot = document.getElementById("vslot");
+  if (!slot) return;
+  var id = slot.getAttribute("data-yt");
+  if (!id || id === "ID_DEL_VIDEO") return;   /* nessun ID ancora: la copertina resta ferma */
+  slot.style.cursor = "pointer";
+  function accendi() {
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + id + "?rel=0&autoplay=1";
+    f.title = "Il turno che nel tuo locale non copre nessuno";
+    f.setAttribute("allow", "accelerometer; autoplay; encrypted-media; picture-in-picture; web-share");
+    f.setAttribute("allowfullscreen", "");
+    slot.replaceWith(f);
+  }
+  slot.addEventListener("click", accendi);
+  slot.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); accendi(); }
+  });
+})();
+</script>
+
+<script>
+(function () {
+
+  var CLARITY_ID = "ylrzg97g6k";   /* vuoto ("") = niente statistiche e niente banner */
+
+  var CHIAVE    = "ppa_consenso_statistiche";   /* null | "si" | "no" | "off" */
+  var CHIAVE_IO = "ppa_sono_il_titolare";
+
+  function leggi(k)     { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function scrivi(k, v) { try { localStorage.setItem(k, v); }   catch (e) {} }
+  function togli(k)     { try { localStorage.removeItem(k); }   catch (e) {} }
+
+  /* ---------- 1. sono io che apro? allora non mi conto ---------- */
+  try {
+    var io = new URLSearchParams(location.search).get("io");
+    if (io === "1") { scrivi(CHIAVE_IO, "1"); console.log("[PPA] questo browser e' escluso dalle statistiche."); }
+    if (io === "0") { togli(CHIAVE_IO);       console.log("[PPA] questo browser torna dentro alle statistiche."); }
+  } catch (e) {}
+  if (leggi(CHIAVE_IO) === "1") return;
+
+  if (!CLARITY_ID) return;
+
+  var scelta = leggi(CHIAVE);
+
+  /* ---------- 2. "spegni tutto": Clarity non parte proprio ---------- */
+  if (scelta === "off") return;
+
+  /* ---------- 3. Clarity parte; il cookie lo decide il consenso ---------- */
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+    t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", CLARITY_ID);
+
+  function consenso(ok) {
+    if (!window.clarity) return;
+    window.clarity("consentv2", {
+      ad_Storage: "denied",                  /* pubblicita': mai, in nessun caso */
+      analytics_Storage: ok ? "granted" : "denied"
+    });
+  }
+
+  consenso(scelta === "si");                 /* prima cosa dopo il tag: default negato */
+
+  /* comandi usati dai bottoni dentro cookie.html */
+  window.ppaConsenso = {
+    stato: function () { return leggi(CHIAVE); },
+    imposta: function (v) {                  /* "si" | "no" | "off" */
+      scrivi(CHIAVE, v);
+      consenso(v === "si");
+      if (v !== "si" && window.clarity) window.clarity("consent", false);  /* cancella i cookie gia' lasciati */
+    },
+    azzera: function () { togli(CHIAVE); consenso(false); }
+  };
+
+  if (scelta) return;                        /* ha gia' risposto: niente banner */
+
+  /* ---------- 4. il banner ---------- */
+  var css = document.createElement("style");
+  css.textContent =
+    '#ppa-cookie{position:fixed;left:14px;right:14px;bottom:14px;z-index:9000;' +
+      'background:#171311;color:#F3EDE5;border-radius:14px;padding:18px 20px;' +
+      'box-shadow:0 10px 34px rgba(0,0,0,.30);font-family:Inter,-apple-system,sans-serif;' +
+      'font-size:.93rem;line-height:1.55;display:flex;gap:18px;align-items:center;' +
+      'flex-wrap:wrap;max-width:880px;margin:0 auto}' +
+    '#ppa-cookie p{margin:0;flex:1 1 320px}' +
+    '#ppa-cookie a{color:#E8A87C}' +
+    '#ppa-cookie .bts{display:flex;gap:10px;flex:0 0 auto}' +
+    '#ppa-cookie button{font:inherit;font-weight:600;border:0;border-radius:9px;' +
+      'padding:12px 20px;cursor:pointer;white-space:nowrap}' +
+    '#ppa-cookie .si{background:#B23C13;color:#fff}' +
+    '#ppa-cookie .si:hover{background:#8F2F0C}' +
+    '#ppa-cookie .no{background:transparent;color:#F3EDE5;border:1px solid rgba(255,255,255,.34)}' +
+    '#ppa-cookie .no:hover{border-color:rgba(255,255,255,.7)}' +
+    '#ppa-cookie button:focus-visible{outline:2px solid #E8A87C;outline-offset:2px}' +
+    '@media(max-width:620px){#ppa-cookie{padding:16px;font-size:.88rem}' +
+      '#ppa-cookie .bts{flex:1 1 100%}#ppa-cookie button{flex:1 1 0}}';
+  document.head.appendChild(css);
+
+  var bar = document.createElement("div");
+  bar.id = "ppa-cookie";
+  bar.setAttribute("role", "dialog");
+  bar.setAttribute("aria-label", "Scelta sul cookie di statistica");
+  bar.innerHTML =
+    '<p>Guardo in forma anonima dove la gente si ferma a leggere, così sistemo i pezzi che non funzionano: ' +
+    'questo non lascia niente sul tuo dispositivo. ' +
+    'Ti chiedo il permesso per un cookie, che serve solo a non contarti due volte se torni. ' +
+    'Niente pubblicità, niente liste, nessuno ti segue in giro. ' +
+    '<a href="cookie.html">Come funziona — e come spegni anche la misura anonima</a>.</p>' +
+    '<span class="bts">' +
+      '<button type="button" class="no">No, grazie</button>' +
+      '<button type="button" class="si">Va bene</button>' +
+    '</span>';
+  document.body.appendChild(bar);
+
+  bar.querySelector(".si").onclick = function () { window.ppaConsenso.imposta("si"); bar.remove(); };
+  bar.querySelector(".no").onclick = function () { window.ppaConsenso.imposta("no"); bar.remove(); };
+})();
+</script>
+
+</body></html>
